@@ -18,9 +18,13 @@ protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=p
 ```
 
 ### Server execution
-➜  server go run main.go
+```
+go run server/main.go
+```
 
 ### Client Execution
-➜  client go run main.go 1
+```
+go run client/main.go 1
+```
 
 

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "google.golang.org/grpc/proto/memoryserver";
+option java_multiple_files = true;
+option java_package = "io.grpc.sample.memoryserver";
+option java_outer_classname = "MemoryServerProto";
+
+package memoryserver;
+
+// The greeting service definition.
+service MemoryServer {
+  // Sends a greeting
+  rpc checkWithMemoryServer (NumberRequest) returns (DoIRemember) {}
+}
+
+// The request message containing the user's name.
+message NumberRequest {
+  string number = 1;
+}
+
+// The response message containing the greetings
+message DoIRemember {
+  string message = 1;
+}
